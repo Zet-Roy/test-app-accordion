@@ -1,0 +1,76 @@
+.Accordeon {
+    width: 500px;
+    background-color: white;
+    border-radius: 10px;
+
+    .BlockHeader {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .Title { 
+            font-size: large;
+            font-weight: 900;
+        }
+
+        .TriangleDown {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: #000000 transparent transparent transparent;
+        }
+    
+        .TriangleUp {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            border-color: transparent transparent #000000 transparent;
+        }
+    }
+
+    .BlockContent {
+
+        .BlockDescription {
+            display: flex;
+
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+
+            .Description {
+                margin-left: 10px;
+            }
+        }
+
+        max-height: 0;
+	    overflow: hidden;
+        transition: max-height 2s;
+        
+        &--open {
+            max-height: 200px;
+        }
+
+        &--close {
+            transition-delay: -0.5s;
+        }
+
+        hr {
+            margin: 0;
+        }
+    }
+}
